@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "name": "@andrew-codes/gatsby-plugin-elasticlunr-search-demo",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "contributors": ["Andrew Smith <andrew@andrew.codes>"],
+  "license": "MIT",
+  "engines": {
+    "node": "8.0.0 - 9.0.0",
+    "npm": ">=5.0.0"
+  },
+  "homepage":
+    "https://github.com/andrew-codes/gatsby-plugin-elasticlunr-search-demo#readme",
+  "bugs": {
+    "url":
+      "https://github.com/andrew-codes/gatsby-plugin-elasticlunr-search-demo/issues"
+  },
+  "keywords": ["gatsby", "gatsby plugin", "elastic search", "demo"],
+  "repository": {
+    "type": "git",
+    "url":
+      "git+https://github.com/andrew-codes/gatsby-plugin-elasticlunr-search-demo.git"
+  },
+  "dependencies": {
+    "@andrew-codes/gatsby-plugin-elasticlunr-search": "^1.0.3",
+    "elasticlunr": "^0.9.5",
+    "graphql": "0.11.7",
+    "lodash.debounce": "^4.0.8",
+    "prop-types": "^15.6.0",
+    "qs": "^6.5.1",
+    "react": "^15.6.2",
+    "react-helmet": "^5.2.0",
+    "react-render-html": "^0.5.2"
+  },
+  "devDependencies": {
+    "gatsby": "^1.9.102",
+    "gatsby-link": "^1.6.22",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-remark-autolink-headers": "^1.4.7",
+    "gatsby-remark-prismjs": "^1.2.9",
+    "gatsby-source-filesystem": "^1.5.7",
+    "gatsby-transformer-remark": "^1.7.19",
+    "gh-pages": "^1.0.0",
+    "graphql-tag": "^2.5.0",
+    "nps": "^5.7.1",
+    "nps-utils": "^1.5.0",
+    "prettier": "^1.7.4",
+    "semver": "^5.4.1"
+  },
+  "scripts": {
+    "start": "nps",
+    "test": "nps test"
+  }
+}
