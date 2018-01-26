@@ -26,7 +26,11 @@ module.exports = {
       hiddenFromHelp,
       script: rimraf(path.join(rootDir, 'public')),
     },
-    default: series.nps(`dev`),
+    cypress: {
+      description: `Open cypress`,
+      script: 'cypress open',
+    },
+    default: series.nps(`clean/cache`, `dev`),
     dev: {
       description: `Run site on a dev server for local site development.`,
       script: crossEnv(`NODE_ENV=development gatsby develop`),
@@ -63,6 +67,14 @@ module.exports = {
         `gh-pages --version --dir public --silent --no-push`,
         `nps clean/public`,
       ),
+    },
+    test: {
+      description: `Run integration tests via cypress.`,
+      script: series('nps dev', 'nps cypress'),
+    },
+    'test/integration': {
+      description: `Run integration tests via cypress.`,
+      script: `cypress run --headed`,
     },
     validate: {
       description: `Ensure your environment is correctly configured before developing locally.`,
