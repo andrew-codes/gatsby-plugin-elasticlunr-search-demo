@@ -6,20 +6,20 @@ class VerticalNavigationList extends Component {
   constructor(...rest) {
     super(...rest);
     this.state = {
-      hits: [],
+      hits: null,
     };
   }
   render() {
     const { currentSlug, edges, searchData } = this.props;
     const { hits } = this.state;
-    console.log(hits);
+
     return (
       <div>
         <Search
           data={searchData}
-          onSearch={hits =>
+          onSearch={(text, hits) =>
             this.setState({
-              hits,
+              hits: text !== '' ? hits : null,
             })
           }
         />
@@ -28,7 +28,7 @@ class VerticalNavigationList extends Component {
             {edges
               .filter(
                 ({ node }) =>
-                  hits.length === 0 ||
+                  !hits ||
                   hits.filter(hit => hit.id !== node.id).length > 0,
               )
               .map(({ node }, index) => (

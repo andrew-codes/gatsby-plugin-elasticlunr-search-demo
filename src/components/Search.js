@@ -21,7 +21,7 @@ export default class Search extends Component {
       const text = evt.target.value;
       const newQuery = qs.stringify({ q: text }, { format: 'RFC1738' });
       const hits = this.getHits(text);
-      this.props.onSearch(hits);
+      this.props.onSearch(text, hits);
       this.setState(s => {
         return {
           ...s,
