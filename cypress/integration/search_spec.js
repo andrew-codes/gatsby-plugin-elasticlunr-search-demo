@@ -63,7 +63,7 @@ describe('search on search result pages', () => {
     });
   });
 
-  describe.only('when searching that yields results', () => {
+  describe('when searching that yields results', () => {
     beforeEach(() => {
       cy.visit('http://localhost:8000/test-page-01/');
     });
