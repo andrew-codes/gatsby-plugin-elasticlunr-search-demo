@@ -24,12 +24,7 @@ describe('search on homepage', () => {
 
       cy.get('input').type('one');
       cy.get('nav dd').should('have.length', 1);
-
-      cy
-        .get('input')
-        .clear()
-        .type('two');
-      cy.get('nav dd').should('have.length', 2);
+      cy.get('nav dd').contains('Test Page 1');
     });
   });
 
@@ -73,12 +68,7 @@ describe('search on search result pages', () => {
 
       cy.get('input').type('one');
       cy.get('nav dd').should('have.length', 1);
-
-      cy
-        .get('input')
-        .clear()
-        .type('two');
-      cy.get('nav dd').should('have.length', 2);
+      cy.get('nav dd').contains('Test Page 1');
     });
   });
 
