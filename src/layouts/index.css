@@ -3,6 +3,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   color: #272c34; /*midnight*/
+  font-family: Arial, sans-serif;
 }
 body {
   margin: 0;
@@ -537,11 +538,18 @@ div.master-pane {
   border-right: 1px solid #edf2f9; /* ghost */
 }
 
+div.master-pane [role='search'] {
+  padding: 0 16px;
+}
+
+div.master-pane nav {
+  width: 250px;
+}
+
 div.master-pane dd a {
   display: block;
   width: 100%;
   padding: 12px 16px;
-  min-width: 250px;
   text-decoration: none;
   color: #31363e; /*gunmetal*/
 }

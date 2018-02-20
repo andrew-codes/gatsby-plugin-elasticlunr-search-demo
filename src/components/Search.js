@@ -58,6 +58,9 @@ export default class Search extends Component {
         <input
           onChange={this.updateQuery}
           placeholder="search"
+          style={{
+            width: '100%',
+          }}
           type="search"
           value={query}
         />

@@ -14,7 +14,22 @@ const App = ({ data: { allMarkdownRemark, site, siteSearchIndex } }) => (
       />
     </div>
     <div className={'detail-pane'}>
-      Welcome to demo site for the gatsby-plugin-elasticlunr-search plugin.
+      <h1>Demo Site for Gatsby Search Plugin</h1>
+      <p>
+        Welcome to demo site for the
+        <a href="https://github.com/andrew-codes/gatsby-plugin-elasticlunr-search">
+          gatsby-plugin-elasticlunr-search plugin
+        </a>.
+      </p>
+      <p>
+        Test page 1 and Page 2 are <strong>indexed by title</strong>, as seen in
+        the nav menu to the left, and by <strong>keyword</strong>. Try searching
+        for "<strong>one</strong>", "<strong>two</strong>" or "<strong>
+          three
+        </strong>". The words "one" and "two" are keywords associated with Test
+        page 1 and "two" and "three" are associated with Page 2.
+      </p>
+      <p>Of course you can also try searching by words matching the title.</p>
     </div>
   </div>
 );
