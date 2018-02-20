@@ -28,8 +28,7 @@ class VerticalNavigationList extends Component {
             {edges
               .filter(
                 ({ node }) =>
-                  !hits ||
-                  hits.filter(hit => hit.id !== node.id).length > 0,
+                  !hits || hits.filter(hit => hit.id === node.id).length > 0,
               )
               .map(({ node }, index) => (
                 <div key={`nav-header-wrapper-${index}`}>
