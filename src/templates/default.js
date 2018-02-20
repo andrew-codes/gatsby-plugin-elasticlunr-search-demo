@@ -48,6 +48,7 @@ export const query = graphql`
     allMarkdownRemark {
       edges {
         node {
+          id
           fields {
             slug
           }
