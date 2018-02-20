@@ -4,9 +4,9 @@ describe('repo ribbon link', () => {
     'http://localhost:8000/test-page-01',
     'http://localhost:8000/non-existant-page',
   ];
-  urls.forEach(createTestRibbonRepoLinkOnPage(describe, it));
+  urls.forEach(createTestForRibbonRepoLinkOnPage(describe, it));
 });
-function createTestRibbonRepoLinkOnPage(describe, it) {
+function createTestForRibbonRepoLinkOnPage(describe, it) {
   return url => {
     describe(`when viewing a page (${url})`, () => {
       it('contains a ribbon that links to the plugin repo', () => {
