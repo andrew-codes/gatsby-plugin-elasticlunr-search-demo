@@ -54,8 +54,13 @@ export default class Search extends Component {
     const { query, hits } = this.state;
 
     return (
-      <div>
-        <input type="text" value={query} onChange={this.updateQuery} />
+      <div role="search">
+        <input
+          onChange={this.updateQuery}
+          placeholder="search"
+          type="search"
+          value={query}
+        />
       </div>
     );
   }
