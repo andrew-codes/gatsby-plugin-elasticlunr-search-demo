@@ -33,29 +33,12 @@ class VerticalNavigationList extends Component {
               )
               .map(({ node }, index) => (
                 <div key={`nav-header-wrapper-${index}`}>
-                  {node.headings
-                    .filter(item => item.depth === 1)
-                    .map((heading, index) => (
-                      <NavigationItem
-                        {...heading}
-                        key={`nav-item-${node.fields.slug}`}
-                        href={`${node.fields.slug}`}
-                      />
-                    ))}
-                  {node.fields.slug === currentSlug &&
-                    node.headings
-                      .filter(item => item.depth > 1)
-                      .map((heading, index) => (
-                        <NavigationItem
-                          {...heading}
-                          key={`nav-sub-item-${index}`}
-                          href={`${
-                            node.fields.slug
-                          }#${heading.value
-                            .toLowerCase()
-                            .replace(/[ ]/g, '-')}`}
-                        />
-                      ))}
+                  <NavigationItem
+                    depth={1}
+                    value={node.frontmatter.title}
+                    key={`nav-item-${index}-${node.fields.slug}`}
+                    href={`${node.fields.slug}`}
+                  />
                 </div>
               ))}
           </dl>
